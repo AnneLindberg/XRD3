@@ -438,6 +438,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: a54792c9b5d27204ca545ad9e4ef04a4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 720d631ecd0d3ce43881a019207274dc, type: 2}
+    - target: {fileID: 5866666021909216657, guid: a54792c9b5d27204ca545ad9e4ef04a4,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a54792c9b5d27204ca545ad9e4ef04a4, type: 3}
 --- !u!1001 &500359967
@@ -718,6 +728,7 @@ GameObject:
   - component: {fileID: 1527263935}
   - component: {fileID: 1527263934}
   - component: {fileID: 1527263933}
+  - component: {fileID: 1527263936}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -791,6 +802,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 15.79, y: 0, z: 0}
+--- !u!114 &1527263936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527263932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de2d05433229584a827194c7062f98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalObject: 
 --- !u!1 &1641263485
 GameObject:
   m_ObjectHideFlags: 1
