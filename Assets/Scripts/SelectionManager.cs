@@ -20,22 +20,20 @@ public class SelectionManager : MonoBehaviour
             selectionRenderer.material = defaultMaterial;
             _selection = null;
         }
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
+
+        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out var hit)) return;
         {
             Console.WriteLine("HER");
             var selection = hit.transform;
-            if (selection.CompareTag(selectableTag))
-            {
-                var selectionRenderer = selection.GetComponent<Renderer>();
-                if (selectionRenderer != null)
-                {
-                    selectionRenderer.material = highlightMaterial;
-                }
-
-                _selection = selection;
-            }
+            if (!selection.CompareTag(selectableTag)) return;
+            var selectionRenderer = selection.GetComponent<Renderer>();
             
+            if (selectionRenderer != null)
+            {
+                selectionRenderer.material = highlightMaterial;
+            }
+
+            _selection = selection;
         }
     }
 }
