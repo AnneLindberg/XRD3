@@ -14,7 +14,7 @@ public class CastSpellOnActivate : MonoBehaviour
     void Start()
     {
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
-        grabInteractable.activated.AddListener(CastSpell);
+        grabInteractable.activated.AddListener(CastSpell);  
     }
 
     public void CastSpell(ActivateEventArgs arg)
